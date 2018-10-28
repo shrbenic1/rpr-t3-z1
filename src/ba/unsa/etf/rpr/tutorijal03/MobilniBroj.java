@@ -7,4 +7,7 @@ public class MobilniBroj {
         this.mobilnaMreza=mobilnaMreza;
         this.broj=broj;
     }
+    public String ispisi() {
+        return "0" + mobilnaMreza + "/" + broj;
+    }
 }
