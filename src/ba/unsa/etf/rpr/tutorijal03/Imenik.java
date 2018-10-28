@@ -4,7 +4,8 @@ import java.util.HashMap;
 
 public class Imenik {
     private HashMap imenik;
-    void dodaj(String ime, TelefonskiBroj broj) {
+    public void dodaj(String ime, TelefonskiBroj broj) {
         imenik.put(broj, ime);
     }
+
 }
