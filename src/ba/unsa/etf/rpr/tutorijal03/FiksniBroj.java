@@ -4,9 +4,7 @@ public class FiksniBroj implements TelefonskiBroj{
     String broj;
     Grad grad;
     public String ispisi() {
-        String s = "";
-        s=grad + "/" + broj;
-        return s;
+        return grad + "/" + broj;
     }
     public FiksniBroj(Grad grad, String broj) {
         this.grad=grad;
