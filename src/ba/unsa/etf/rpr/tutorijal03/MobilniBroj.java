@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-public class MobilniBroj {
+public class MobilniBroj implements TelefonskiBroj {
     private int mobilnaMreza;
     String broj;
     public MobilniBroj(int mobilnaMreza, String broj) {
