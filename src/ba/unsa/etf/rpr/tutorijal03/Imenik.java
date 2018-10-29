@@ -3,9 +3,11 @@ package ba.unsa.etf.rpr.tutorijal03;
 import java.util.HashMap;
 
 public class Imenik {
-    private HashMap imenik;
+    private HashMap imenikPoImenu;
+    private HashMap imenikPoBroju;
     public void dodaj(String ime, TelefonskiBroj broj) {
-        imenik.put(broj, ime);
+        imenikPoBroju.put(broj, ime);
+        imenikPoImenu.put(ime, broj);
     }
 
 }
