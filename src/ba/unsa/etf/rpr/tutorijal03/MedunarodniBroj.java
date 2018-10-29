@@ -8,13 +8,16 @@ public class MedunarodniBroj implements  TelefonskiBroj {
         this.drzava=drzava;
         this.broj=broj;
     }
+
     public String ispisi() {
         return drzava + " " + broj;
     }
+
     @Override
     public int hashCode() {
         return drzava.hashCode();
     }
+
     @Override
     public boolean equals (Object o) {
         if (o == null) {
