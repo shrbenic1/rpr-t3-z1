@@ -16,5 +16,11 @@ public class Imenik {
         }
         else return null;
     }
+    public String dajIme(TelefonskiBroj broj) {
+        if(imenikPoBroju.containsKey(broj)) {
+            return (String) imenikPoBroju.get(broj);
+        }
+        else return null;
+    }
 
 }
