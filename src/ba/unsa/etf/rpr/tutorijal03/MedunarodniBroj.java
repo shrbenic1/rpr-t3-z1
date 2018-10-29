@@ -8,7 +8,7 @@ public class MedunarodniBroj implements  TelefonskiBroj {
         this.drzava=drzava;
         this.broj=broj;
     }
-    public String ispis() {
+    public String ispisi() {
         return drzava + " " + broj;
     }
     @Override
