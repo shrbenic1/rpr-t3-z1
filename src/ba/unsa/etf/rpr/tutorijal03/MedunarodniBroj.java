@@ -7,4 +7,19 @@ public class MedunarodniBroj {
         this.drzava=drzava;
         this.broj=broj;
     }
+    @Override
+    public int hashCode() {
+        return drzava.hashCode();
+    }
+    @Override
+    public boolean equals (Object o) {
+        if (o == null) {
+            return false;
+        }
+        else if (o instanceof MedunarodniBroj) {
+            MedunarodniBroj medunarodni = (MedunarodniBroj) o;
+            return medunarodni.broj.equals(this.broj) && medunarodni.hashCode() == this.hashCode();
+        }
+        else return false;
+    }
 }
