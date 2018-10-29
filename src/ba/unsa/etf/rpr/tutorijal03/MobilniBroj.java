@@ -10,4 +10,19 @@ public class MobilniBroj implements TelefonskiBroj {
     public String ispisi() {
         return "0" + mobilnaMreza + "/" + broj;
     }
+    @Override
+    public int hashCode() {
+        return mobilnaMreza;
+    }
+    @Override
+    public boolean equals (Object o) {
+        if (o == null) {
+            return false;
+        }
+        else if (o instanceof MobilniBroj) {
+            MobilniBroj mobilni = (MobilniBroj) o;
+            return mobilni.broj.equals(this.broj) && mobilni.hashCode() == this.hashCode();
+        }
+        else return false;
+    }
 }
