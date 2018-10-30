@@ -52,5 +52,12 @@ public class Imenik {
         }
         return s;
     }
-    Set<TelefonskiBroj>izGradaBrojevi(Grad g) {return Collections.emptySet();}
+    Set<TelefonskiBroj>izGradaBrojevi(Grad g) {
+        Set<TelefonskiBroj> s = new TreeSet<>();
+        for(Map.Entry<String, TelefonskiBroj> entry : imenik.entrySet()) {
+            TelefonskiBroj brojTelefona = entry.getValue();
+            if(brojTelefona instanceof FiksniBroj && g.equals(((FiksniBroj) brojTelefona).getGrad())) s.add(brojTelefona);
+        }
+        return s;
+    }
 }
