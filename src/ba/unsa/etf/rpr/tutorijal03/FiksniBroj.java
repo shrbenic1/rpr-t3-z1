@@ -42,4 +42,8 @@ public class FiksniBroj implements TelefonskiBroj{
         }
         else return false;
     }
+
+    public Grad getGrad() {
+        return grad;
+    }
 }
