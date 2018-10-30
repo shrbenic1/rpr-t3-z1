@@ -9,6 +9,7 @@ public class MobilniBroj implements TelefonskiBroj {
         this.broj=broj;
     }
 
+    @Override
     public String ispisi() {
         return "0" + mobilnaMreza + "/" + broj;
     }

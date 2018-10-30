@@ -37,7 +37,7 @@ public class Imenik {
             int i = 1;
             if(key.charAt(0)==s) {
                 String privremeni;
-                privremeni=String.format("%d. %s- %s\n", i, entry, brojTelefona.ispisi());
+                privremeni=String.format("%d. %s - %s\n", i, key, brojTelefona.ispisi());
                 naSlovo+=privremeni;
             }
             i++;
