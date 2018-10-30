@@ -2,7 +2,6 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -31,9 +30,23 @@ public class Imenik {
     }
 
     String naSlovo(char s) {
-
-        return "";
+        String naSlovo = "";
+        for(Map.Entry<String, TelefonskiBroj> entry : imenik.entrySet()) {
+            String key = entry.getKey();
+            TelefonskiBroj brojTelefona = entry.getValue();
+            int i = 1;
+            if(key.charAt(0)==s) {
+                String privremeni;
+                privremeni=String.format("%d. %s- %s\n", i, entry, brojTelefona.ispisi());
+                naSlovo+=privremeni;
+            }
+            i++;
+        }
+        return naSlovo;
     }
-    Set<String> izGrada(Grad g) {return Collections.emptySet();}
+
+    Set<String> izGrada(Grad g) {
+        return Collections.emptySet();
+    }
     Set<TelefonskiBroj>izGradaBrojevi(Grad g) {return Collections.emptySet();}
 }
