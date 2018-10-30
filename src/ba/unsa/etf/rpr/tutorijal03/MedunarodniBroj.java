@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-public class MedunarodniBroj implements  TelefonskiBroj {
+public class MedunarodniBroj extends TelefonskiBroj {
     private String drzava;
     private String broj;
 
