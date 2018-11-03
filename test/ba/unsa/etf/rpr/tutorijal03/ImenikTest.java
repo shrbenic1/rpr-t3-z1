@@ -17,7 +17,7 @@ class ImenikTest {
         imenik.dodaj("Meho Mehic", new FiksniBroj(SARAJEVO, "123-456"));
         assertEquals("033/123-456", imenik.dajBroj("Meho Mehic"));
         FiksniBroj broj = new FiksniBroj(SARAJEVO, "123-156");
-        assertEquals("Hana Hanic", imenik.dajIme(broj));
+        assertEquals("Hana Hanic", imenik.dajIme(broj)); //testiramo dajIme
     }
 
     @Test
