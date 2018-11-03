@@ -18,6 +18,9 @@ class ImenikTest {
         assertEquals("033/123-456", imenik.dajBroj("Meho Mehic"));
         FiksniBroj broj = new FiksniBroj(SARAJEVO, "123-156");
         assertEquals("Hana Hanic", imenik.dajIme(broj)); //testiramo dajIme
+        assertEquals("+1 23 45-67-89", imenik.dajBroj("John Smith")); //testiramo klasu MedunarodniBroj
+        MedunarodniBroj medunarodniBroj = new MedunarodniBroj("+1", "23 45-67-89");
+        assertEquals("John Smith", imenik.dajIme(medunarodniBroj)); //testiramo klasu MedunarodniBroj
     }
 
     @Test
