@@ -21,6 +21,9 @@ class ImenikTest {
         assertEquals("+1 23 45-67-89", imenik.dajBroj("John Smith")); //testiramo klasu MedunarodniBroj
         MedunarodniBroj medunarodniBroj = new MedunarodniBroj("+1", "23 45-67-89");
         assertEquals("John Smith", imenik.dajIme(medunarodniBroj)); //testiramo klasu MedunarodniBroj
+        imenik.dodaj("Sven Hrbenic", new MobilniBroj(062, "358-994")); //testiramo klasu MobilniBroj
+        MobilniBroj mobilniBroj = new MobilniBroj(062, "358-994");
+        assertEquals("Sven Hrbenic", imenik.dajIme(mobilniBroj)); // testiramo klasu MobilniBroj
     }
 
     @Test
