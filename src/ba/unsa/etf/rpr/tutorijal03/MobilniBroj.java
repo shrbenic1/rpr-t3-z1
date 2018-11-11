@@ -28,6 +28,8 @@ public class MobilniBroj extends TelefonskiBroj {
             MobilniBroj mobilni = (MobilniBroj) o;
             return mobilni.broj.equals(this.broj) && mobilni.hashCode() == this.hashCode();
         }
-        else return false;
+        else {
+            return false;
+        }
     }
 }

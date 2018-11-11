@@ -27,6 +27,8 @@ public class MedunarodniBroj extends TelefonskiBroj {
             MedunarodniBroj medunarodni = (MedunarodniBroj) o;
             return medunarodni.broj.equals(this.broj) && medunarodni.hashCode() == this.hashCode();
         }
-        else return false;
+        else {
+            return false;
+        }
     }
 }

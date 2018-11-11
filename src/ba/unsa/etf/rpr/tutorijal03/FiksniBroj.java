@@ -40,7 +40,9 @@ public class FiksniBroj extends TelefonskiBroj{
             FiksniBroj fiksni = (FiksniBroj) o;
             return fiksni.broj.equals(this.broj) && fiksni.hashCode() == this.grad.hashCode();
         }
-        else return false;
+        else {
+            return false;
+        }
     }
 
     public Grad getGrad() {

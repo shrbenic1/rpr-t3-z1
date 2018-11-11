@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Imenik {
 
-    private HashMap <String, TelefonskiBroj> imenik = new HashMap<>();
+    private Map <String, TelefonskiBroj> imenik = new HashMap<>();
 
     public void dodaj(String ime, TelefonskiBroj broj) {
         imenik.put(ime, broj);
@@ -15,14 +15,18 @@ public class Imenik {
         if(imenik.containsKey(ime)) {
             return ((TelefonskiBroj) imenik.get(ime)).ispisi();
         }
-        else return null;
+        else {
+            return null;
+        }
     }
 
     public String dajIme(TelefonskiBroj broj) {
         for(Map.Entry<String, TelefonskiBroj> entry : imenik.entrySet()) {
             String key = entry.getKey();
             TelefonskiBroj brojTelefona = entry.getValue();
-            if(brojTelefona.equals(broj)) return key;
+            if(brojTelefona.equals(broj)) {
+                return key;
+            }
         }
         return null;
     }
@@ -48,7 +52,9 @@ public class Imenik {
         for(Map.Entry<String, TelefonskiBroj> entry : imenik.entrySet()) {
             String key = entry.getKey();
             TelefonskiBroj brojTelefona = entry.getValue();
-            if(brojTelefona instanceof FiksniBroj && g.equals(((FiksniBroj) brojTelefona).getGrad())) s.add(key);
+            if(brojTelefona instanceof FiksniBroj && g.equals(((FiksniBroj) brojTelefona).getGrad())) {
+                s.add(key);
+            }
         }
         return s;
     }
@@ -56,7 +62,9 @@ public class Imenik {
         Set<TelefonskiBroj> s = new TreeSet<>();
         for(Map.Entry<String, TelefonskiBroj> entry : imenik.entrySet()) {
             TelefonskiBroj brojTelefona = entry.getValue();
-            if(brojTelefona instanceof FiksniBroj && g.equals(((FiksniBroj) brojTelefona).getGrad())) s.add(brojTelefona);
+            if(brojTelefona instanceof FiksniBroj && g.equals(((FiksniBroj) brojTelefona).getGrad())) {
+                s.add(brojTelefona);
+            }
         }
         return s;
     }
